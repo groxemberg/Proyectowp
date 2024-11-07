@@ -3,7 +3,7 @@
 <div class="col-md-12 col-sm-12 ">
   <div class="x_panel">
     <div class="x_title text-center">
-      <h5 >MODIFICAR EMPLEADO</h5>              
+      <h5 >MODIFICAR DATOS DE FUNCIONARIO</h5>              
     </div> <br>
     <?php 
         foreach ($infoempleado->getResult() as $row) {

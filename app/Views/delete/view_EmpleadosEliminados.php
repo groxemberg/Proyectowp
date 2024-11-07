@@ -12,7 +12,7 @@
             <i class="glyphicon glyphicon-arrow-left"></i>
       <?php echo form_close();?>
       </div>
-        <h5 >EMPLEADOS ELIMINADOS</h5> 
+        <h5 >FUNCIONARIOS DADO DE BAJA</h5> 
     </div>
     <div class="x_content">
       <div class="row">

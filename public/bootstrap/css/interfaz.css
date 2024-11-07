@@ -1,0 +1,98 @@
+ /* INTERFAZ PARA LA VISTA DE TODO EL SISTEMA */
+ 
+ label{
+    font-weight: bold;
+    color: #000000;
+  }
+
+  #menu1{
+  background-color:#040300;
+}
+
+  div .nav_menu{
+    background-color:  #900703;
+  }
+
+  div .x_title {
+    background-color: #900703;
+  }
+
+div .x_panel {
+  background-color:#B0B3B1 ;
+}
+
+div #panel{
+	background-color:white;
+}
+
+ #datatable{
+    background-color:white;
+  }
+
+div h5{
+    font-weight: bold; 
+    color: white;
+    margin: 5px 0px 0px 0px;
+  }
+  
+   .btn-sm{
+    margin: 0px 0px 0px 10px;
+    background-color:#900703;
+    color: white;
+  }
+
+  #btnGroupDrop1{
+  	background-color:#900703;
+    color: white;
+  }
+
+  #botright{
+    margin: 0px 10px 0px 0px;
+  }
+
+  .btn{
+    background-color:blue;
+  }
+
+  #atras{
+    margin: 0px 0px 0px 7px;
+  }
+
+ 
+/* INTERFAZ DE CONTROL PARA ESTADOS */
+
+#verde{
+  color:white;
+  font-weight: bold;
+  font-family: sans-serif;
+  background: green;
+  border-radius: 10px;
+}
+
+#rojo{
+  color:white;
+  font-weight: bold; 
+  font-family: sans-serif;
+  background: red;
+  border-radius: 15px;
+}
+
+#anaranjado{
+  color:black; 
+  font-weight: bold; 
+  font-family: sans-serif; 
+  background: orange; 
+  border-radius: 15px;
+
+}
+
+#azul{
+  color:white; 
+  font-weight: bold; 
+  font-family: sans-serif; 
+  background:blue; 
+  border-radius: 15px;
+
+}
+
+/* INTERFAZ PARA CONTROL DE MENSAJE EN ESTADO DE REVISIÓN*/

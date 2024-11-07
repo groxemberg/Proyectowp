@@ -13,28 +13,32 @@
         <div class="row">
           <div class="col-md-4">
             <label class="float-left">NOMBRE(S):</label>
-            <input type="text" name="nombres" class="col-md-12 form-control" placeholder="Ingrese el nombre completo" autocomplete="off" value="<?php echo $row->nombres; ?>"> <br>
+            <input type="text" name="nombres" class="col-md-12 form-control" placeholder="Ingrese el nombre completo" autocomplete="off" value="<?php echo $row->nombres; ?>" onfocus="mostrarMensaje(this)" onblur="ocultarMensaje(this)"> 
+            <span class="mensaje-obligatorio" style="display: none; color: red;">(*) Campo obligatorio</span><br>
             <p style="color: red;"><?php echo isset($validation) && $validation->hasError('nombres') ? $validation->getError('nombres') : ''; ?></p>
           </div>
           <div class="col-md-4">
            <label class="float-left">PRIMER APELLIDO:</label>
-            <input type="text" name="primerApellido" class="col-md-12 form-control" placeholder="Ingrese el primer apellido" autocomplete="off" value="<?php echo $row->primerApellido; ?>"> <br>
+            <input type="text" name="primerApellido" class="col-md-12 form-control" placeholder="Ingrese el primer apellido" autocomplete="off" value="<?php echo $row->primerApellido; ?>" onfocus="mostrarMensaje(this)" onblur="ocultarMensaje(this)"> 
+            <span class="mensaje-obligatorio" style="display: none; color: red;">(*) Campo obligatorio</span><br>
             <p style="color: red;"><?php echo isset($validation) && $validation->hasError('primerApellido') ? $validation->getError('primerApellido') : ''; ?></p>
           </div>
           <div class="col-md-4">
             <label class="float-left">SEGUNDO APELLIDO:</label>
-            <input type="text" name="segundoApellido" class="col-md-12 form-control" placeholder="Ingrese el segundo apellido" autocomplete="off" value="<?php echo $row->segundoApellido; ?>"> <br>
+            <input type="text" name="segundoApellido" class="col-md-12 form-control" placeholder="Ingrese el segundo apellido" autocomplete="off" value="<?php echo $row->segundoApellido; ?>" onfocus="mostrarMensaje(this)" onblur="ocultarMensaje(this)"> 
+            <span class="mensaje-obligatorio" style="display: none; color: red;">(*) Campo opcional</span>
           </div>
         </div> <br>
         <div class="row">
           <div class="col-md-4">
             <label class="float-left">CÉDULA DE IDENTIDAD:</label>
-            <input type="text" name="ci" class="col-md-12 form-control" placeholder="Ingrese el número de ci." autocomplete="off" value="<?php echo $row->ci; ?>"> <br>
+            <input type="text" name="ci" class="col-md-12 form-control" placeholder="Ingrese el número de ci." autocomplete="off" value="<?php echo $row->ci; ?>" onfocus="mostrarMensaje(this)" onblur="ocultarMensaje(this)"> 
+            <span class="mensaje-obligatorio" style="display: none; color: red;">(*) Campo obligatorio</span><br>
             <p style="color: red;"><?php echo isset($validation) && $validation->hasError('ci') ? $validation->getError('ci') : ''; ?></p>
           </div>
           <div class="col-md-4">
             <label class="float-left">EXPEDICIÓN:</label>
-            <select name="expedicion" class="col-md-12 form-control" autocomplete="off" value="<?php echo set_value('expedicion'); ?>">
+            <select name="expedicion" class="col-md-12 form-control" autocomplete="off" value="<?php echo set_value('expedicion'); ?>" onfocus="mostrarMensaje(this)" onblur="ocultarMensaje(this)">
               <option> <?php echo $row->expedicion; ?></option>
               <option value="CH">CH</option>
               <option value="LP">LP</option>
@@ -45,10 +49,10 @@
               <option value="SC">SC</option>
               <option value="BE">BE</option>
               <option value="PD">PD</option>
-            </select><br>
+            </select>
+            <span class="mensaje-obligatorio" style="display: none; color: red;">(*) Campo obligatorio</span>
             <p style="color: red;"><?php echo isset($validation) && $validation->hasError('expedicion') ? $validation->getError('expedicion') : ''; ?></p>
           </div>
-        
         </div> <br>
       <hr>
       <div class="row float-right">
@@ -87,4 +91,20 @@
 </div>
 </div>
 </div>
+
+<script>
+  function mostrarMensaje(input) {
+    var mensaje = input.nextElementSibling;
+    if (mensaje && mensaje.classList.contains('mensaje-obligatorio')) {
+      mensaje.style.display = 'block';
+    }
+  }
+
+  function ocultarMensaje(input) {
+    var mensaje = input.nextElementSibling;
+    if (mensaje && mensaje.classList.contains('mensaje-obligatorio')) {
+      mensaje.style.display = 'none';
+    }
+  }
+</script>
 <?= $this->endSection() ?>

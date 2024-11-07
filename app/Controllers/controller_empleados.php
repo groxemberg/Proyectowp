@@ -159,20 +159,20 @@ class controller_empleados extends BaseController {
 				$validation = \Config\Services::validation();
 				$validation->setRules([
 					'nombres' => ['rules' => 'required|alpha_space','errors' => [
-							'required' => '(*) Se requiere llenar el campo de Nombres.',
+							'required' => '(*) Se requiere llenar el campo',
 							'alpha_space' => '(*) El campo de Nombres no debe contener números.']
 					],
 					'primerApellido' => [
 						'rules' => 'required|alpha_space',
 						'errors' => [
-							'required' => '(*) Se requiere llenar el campo de Primer Apellido.',
+							'required' => '(*) Se requiere llenar el campo',
 							'alpha_space' => '(*) El campo de Primer Apellido no debe contener números.'
 						]
 					],
 					'ci' => [
 						'rules' => 'required',
 						'errors' => [
-							'required' => '(*) Se requiere llenar el campo de CI.'
+							'required' => '(*) Se requiere llenar el campo'
 						]
 					]
 				]);

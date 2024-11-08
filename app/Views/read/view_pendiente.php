@@ -147,14 +147,14 @@ $contrevision=$wppendientes->countEnRevision();
                           <input type="hidden" name="nroInforme" value="<?php echo $row->nroInforme;?>" > 
                             <input type="hidden" name="idInforme" value="<?php echo $row->nroInforme;?>" >
                             <input type="hidden" name="estado" value="<?php echo $row->estado;?>" >
-                            <button type="submit" class="dropdown-item" ><i class="fa fa-database"></i>   Agregar o Modificar Wp</button>
+                            <button type="submit" class="dropdown-item" ><i class="fa fa-database"></i>   Agregar o Modificar PT</button>
                           <?php echo form_close();
                           if ($session->get('tipo')=='jefe') {
                            ?>
                           <?php echo form_open_multipart('actividadesmodificar');?>        
                             <input type="hidden" name="idInforme" value="<?php echo $row->idInforme;?>" >
                             <input type="hidden" name="idEmpleado" value="<?php echo $row->idEmpleado;?>" >
-                            <button type="submit" class="dropdown-item" ><i class="fa fa-edit (alias)"></i>  Modificar Datos Wp</button>
+                            <button type="submit" class="dropdown-item" ><i class="fa fa-edit (alias)"></i>  Modificar Actividad</button>
                           <?php echo form_close(); ?>
                           <input type="hidden" name="idInforme" value="<?php echo $row->idInforme;?>">
                             <button type="submit" name="botton" value="Eliminar" class="dropdown-item" onclick="return confirm_modalFotos(<?php echo $row->idInforme; ?>)" ><i class="fa fa-trash"></i>  Eliminar</button> 

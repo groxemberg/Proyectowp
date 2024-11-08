@@ -40,14 +40,14 @@
               if ($session->get('tipo')=='jefe' || $session->get('tipo')=='ejecutor') {?>
                 <li><a style="color: white; font-weight: bold;"><i class="fa fa-folder-open" style="color: white;"></i>Papeles de Trabajo<span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu">
-                    <li>
-                      <?php echo form_open_multipart('actividadesindex');?>
-                        <button type="submit" class="btn btn-dark btn-sm text-left w-100" style="background-color: transparent; border: none;" >Mis Actividades</button>
+                  <li>
+                      <?php echo form_open_multipart('pendientesindex');?>
+                        <button type="submit" class="btn btn-dark btn-sm text-left w-100" style="background-color: transparent; border: none;" >Papeles de Trabajo</button>
                       <?php echo form_close();?>
                     </li>
                     <li>
-                      <?php echo form_open_multipart('pendientesindex');?>
-                        <button type="submit" class="btn btn-dark btn-sm text-left w-100" style="background-color: transparent; border: none;" >Papeles de Trabajo</button>
+                      <?php echo form_open_multipart('actividadesindex');?>
+                        <button type="submit" class="btn btn-dark btn-sm text-left w-100" style="background-color: transparent; border: none;" >Mis Actividades</button>
                       <?php echo form_close();?>
                     </li>
                   </ul>

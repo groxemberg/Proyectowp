@@ -88,8 +88,8 @@ $session=session();
                         <input type="hidden" name="idInforme" value="<?php echo $row->idInforme;?>">
                         <select name="tipoWp" class="col-sm-8 form-control" value="<?php echo set_value('tipoWp'); ?>">
                           <option value=" ">Seleccione...</option>
-                          <option value="1">Devolver WP</option>
-                          <option value="2">Cerrar WP</option>
+                          <option value="1">Devolver PT</option>
+                          <option value="2">Cerrar PT</option>
                         </select>
                         <button type="submit" class="btn btn-warning" data-toggle="tooltip" id="parpadeo" data-placement="top" title="Enviar" ><i class="fa fa-sign-out"></i></button>
                       </div> 

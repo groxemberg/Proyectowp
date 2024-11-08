@@ -14,44 +14,50 @@
       <div class="row">
         <div class="col-md-2">
           <label >TIPO INFORME:</label>
-          <select name="tipoInforme" id="tipoInforme" class="col-md-12 form-control" autocomplete="off">
+          <select name="tipoInforme" id="tipoInforme" class="col-md-12 form-control" autocomplete="off" onfocus="showMessage(this)" onblur="hideMessage(this)">
               <option> <?php echo $row->tipoInforme; ?></option>
               <option value="P" >P</option>
               <option value="NP">NP</option>
           </select> <br>
+          <span class="input-message" style="display: none; color: red;">(*) Campo obligatorio</span>
         </div>
         <div class="col-md-2">
           <label>NRO. INFORME:</label>
-          <input type="text" name="nroInforme" id="nroInforme" placeholder="" class="col-md-12 form-control" value="<?php echo $row->nroInforme; ?>" autocomplete="off" ><br>
+          <input type="text" name="nroInforme" id="nroInforme" placeholder="" class="col-md-12 form-control" value="<?php echo $row->nroInforme; ?>" autocomplete="off" onfocus="showMessage(this)" onblur="hideMessage(this)">
+          <span class="input-message" style="display: none; color: red;">(*) Campo obligatorio</span>
           <p style="color: red;"><?php echo isset($validation) && $validation->hasError('nroInforme') ? $validation->getError('nroInforme') : ''; ?></p>
         </div>
         <div class="col-md-8">
           <label >INFORME:</label>
-          <input type="text" name="informe" class="col-md-12 form-control" placeholder="Ingrese el informe a realizar" autocomplete="off" value="<?php echo $row->informe; ?>"><br>
+          <input type="text" name="informe" class="col-md-12 form-control" placeholder="Ingrese el informe a realizar" autocomplete="off" value="<?php echo $row->informe; ?>" onfocus="showMessage(this)" onblur="hideMessage(this)">
+          <span class="input-message" style="display: none; color: red;">(*) Campo obligatorio</span>
           <p style="color: red;"><?php echo isset($validation) && $validation->hasError('informe') ? $validation->getError('informe') : ''; ?></p>
         </div>
       </div> <br>
       <div class="row">
         <div class="col-md-4">
           <label >FECHA DE INICIO:</label>
-          <input type="date" name="fechaInicio" class="col-md-12 form-control" value="<?php echo $row->fechaInicio;?>"> <br>
+          <input type="date" name="fechaInicio" class="col-md-12 form-control" value="<?php echo $row->fechaInicio;?>" onfocus="showMessage(this)" onblur="hideMessage(this)">
+          <span class="input-message" style="display: none; color: red;">(*) Campo obligatorio</span>
           <p style="color: red;"><?php echo isset($validation) && $validation->hasError('fechaInicio') ? $validation->getError('fechaInicio') : ''; ?></p>
         </div>
         <div class="col-md-4">
           <label >FECHA DE CONCLUSIÓN:</label>
-          <input type="date" name="fechaConclusion" class="col-md-12 form-control" value="<?php echo $row->fechaInicio;?>"> <br>
+          <input type="date" name="fechaConclusion" class="col-md-12 form-control" value="<?php echo $row->fechaInicio;?>" onfocus="showMessage(this)" onblur="hideMessage(this)">
+          <span class="input-message" style="display: none; color: red;">(*) Campo obligatorio</span>
           <p style="color: red;"><?php echo isset($validation) && $validation->hasError('fechaConclusion') ? $validation->getError('fechaConclusion') : ''; ?></p>
         </div>
         <div class="col-md-4">
           <label >FECHA DE PRESENTACIÓN:</label>
-          <input type="date" name="fechaPresentacion" class="col-md-12 form-control" value="<?php echo $row->fechaPresentacion;?>" > <br>
+          <input type="date" name="fechaPresentacion" class="col-md-12 form-control" value="<?php echo $row->fechaPresentacion;?>" onfocus="showMessage(this)" onblur="hideMessage(this)" >
+          <span class="input-message" style="display: none; color: red;">(*) Campo opcional</span>
         </div>
       </div> <br>
       <div class="row">
               
             <div class="col-md-4">
               <label>RESPONSABLE DE EJECUCIÓN:</label>
-                <select name="idEmpleado" class="col-md-12 form-control" autocomplete="off">
+                <select name="idEmpleado" class="col-md-12 form-control" autocomplete="off" onfocus="showMessage(this)" onblur="hideMessage(this)">
                 <option value="<?php echo $row->idEmpleado;?>"><?php echo $row->nombres.' '.$row->primerApellido.' '.$row->segundoApellido;?></option>
                     <?php
                      foreach ($seleccion->getResult() as  $rowa)
@@ -59,7 +65,8 @@
                     <?php echo $rowa->nombres.' '.$rowa->primerApellido.' '.$rowa->segundoApellido;?>
                     </option><?php
                     }?>
-              </select><br>
+              </select>
+              <span class="input-message" style="display: none; color: red;">(*) Campo obligatorio</span>
             </div>
           </div>
        <hr>
@@ -99,5 +106,22 @@
 </div>
 </div>
 </div>
+
+<script>
+  
+  function showMessage(input) {
+    var message = input.nextElementSibling;
+    if (message && message.classList.contains('input-message')) {
+      message.style.display = 'block';
+    }
+  }
+
+  function hideMessage(input) {
+    var message = input.nextElementSibling;
+    if (message && message.classList.contains('input-message')) {
+      message.style.display = 'none';
+    }
+  }
+</script>
 
 <?= $this->endSection() ?>

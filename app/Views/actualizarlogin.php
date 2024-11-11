@@ -69,7 +69,7 @@
       </section>
     </div>
   </div>
-  <h1 id="proyecto">W.P.S.</h1>
+  <h1 id="proyecto">S.P.T.</h1>
 
   <script>
     function validarContrasena() {

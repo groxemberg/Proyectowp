@@ -1,2 +1,2 @@
-Usuario fmichel
-Contraseña:: Cbba123
+Usuario: fmichel
+Contraseña: Cbba123

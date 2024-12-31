@@ -26,9 +26,9 @@
          <label >ROL:</label>
           <select name="tipo" class="col-md-12 form-control" autocomplete="off">
             <option><?php echo $row->tipo; ?></option>
-            <option value="jefe">Jefe</option>
+            <option value="jefe">Administrador</option>
             <option value="ejecutor">Ejecutor</option>
-            <option value="inspector">Inspector</option>
+            <option value="inspector">Usuario Externo</option>
           </select>
         </div>
         <p style="color: red;"><?php echo isset($validation) && $validation->hasError('tipo') ? $validation->getError('tipo') : ''; ?></p>

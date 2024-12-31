@@ -4,7 +4,7 @@
 <div class="col-md-12 col-sm-12 ">
   <div class="x_panel">
     <div class="x_title text-center">
-      <h5 style="font-weight: bold;">DATOS DE FUNCIONARIO</h5>              
+      <h5 style="font-weight: bold;">DATOS DEL FUNCIONARIO</h5>              
     </div>
     <hr>
     <?php
@@ -74,9 +74,9 @@
         <label class="float-left">ROL:</label>
         <select name="tipo" class="col-md-12 form-control" autocomplete="off" value="<?php echo set_value('tipo'); ?>" onfocus="showMessage(this)" onblur="hideMessage(this)">
           <option value="">Seleccione...</option>
-          <option value="jefe">Jefe</option>
+          <option value="jefe">Administrador</option>
           <option value="ejecutor">Ejecutor</option>
-          <option value="inspector">Inspector</option>
+          <option value="inspector">Usuario Externo</option>
         </select>
         <p class="input-message" style="display: none; color: red;">(*) Campo obligatorio</p> <br>
         <p style="color: red;"><?php echo isset($validation) && $validation->hasError('tipo') ? $validation->getError('tipo') : ''; ?></p>
@@ -106,6 +106,9 @@
       <?php echo form_close(); ?>
     </div>
   </div>
+</div>
+</div>
+</div>
 </div>
 
 <script>

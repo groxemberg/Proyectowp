@@ -86,6 +86,8 @@ class Reporte_Model extends Model {
 	{
 		return $this->db->table('empleado')
 		->where('estado', '1')
+		->where('tipo', 'jefe')
+		->orwhere('tipo', 'ejecutor')
 		->get();
 	}
 }

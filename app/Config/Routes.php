@@ -6,6 +6,7 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 //RUTAS PARA LOS INGRESOS AL SISTEMA Y SALIDA DEL SISTEMA
+$routes->get('/', 'Home::index');
 $routes->get('login', 'Usuarios::index'); //raiz de la app para ingresar siempre al login
 $routes->post('Usuarios/validar', 'Usuarios::validar');
 $routes->get('usuarios/panel', 'Usuarios::panel');

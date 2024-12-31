@@ -41,7 +41,23 @@ $session=session();
                     <td class="text-center" ><?php echo $indice;?></td>
                     <td ><?php echo $row->nombres.' '.$row->primerApellido.' '.$row->segundoApellido;?></td>
                     <td class="text-center" ><?php echo $row->usuario;?></td>
-                    <td class="text-center"><?php echo $row->tipo;?></td>
+                    <?php 
+                    $rol=$row->tipo;
+                    ?>
+                    <td class="text-center">
+                    <?php if ($rol=='jefe')
+                    {?>
+                    <p>Administrador</p>
+                    <?php
+                    } if ($rol=='inspector')
+                    {?>
+                    <p>Usuario Externo</p>
+                    <?php
+                     } if ($rol=='ejecutor')
+                     {?>
+                     <p>Ejecutor</p>
+                     <?php } ?>
+                    </td>
               <?php
                 if($session->get('tipo')=='jefe')
                 {

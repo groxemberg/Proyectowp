@@ -1,0 +1,7 @@
+Rol: cambiar inspector por Usuario Externo
+cambiar Jefe por Administrador
+Arreglar la vista de add funcionarios vista plomo.
+Datos del funcionario
+
+
+
